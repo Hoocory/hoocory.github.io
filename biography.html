@@ -20,6 +20,41 @@
 		href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
 
 	<style>
+
+		.profile-header {
+				display: flex;
+				justify-content: space-between;
+				/* Aligns the bottom of the image with the bottom of the text area */
+				align-items: flex-end; 
+				padding-bottom: 0.5em; /* Controls the 'gap' between the photo and the line */
+				margin-bottom: 2em;
+			}
+
+			.profile-image-container img {
+				width: 280px; /* Adjusted size for better corner fit */
+				height: auto;
+				border-radius: 200px;
+				display: block; /* Removes bottom whitespace ghosting */
+				border: 2px solid rgba(255, 255, 255, 0.1);
+
+				position: relative;
+				top:  -100px;      /* Negative moves it UP, Positive moves it DOWN */
+				left: -300px;     /* Negative moves it LEFT (away from the edge) */
+			}
+
+			/* Mobile fix to keep it looking clean on phones */
+			@media screen and (max-width: 736px) {
+				.profile-header {
+					flex-direction: column;
+					align-items: center;
+					text-align: center;
+				}
+				.profile-image-container img {
+					margin-top: 1em;
+					width: 180px;
+				}
+			}
+
 		/* The Frame */
 		.research-slideshow {
 			max-width: 900px;
@@ -151,9 +186,12 @@
 
 		<!-- Wrapper -->
 		<section id="wrapper">
-			<header>
+			<header class="profile-header">
 				<div class="inner">
 					<h2>About Me</h2>
+				</div>
+				<div class="profile-image-container">
+					<img src="images/profile_pic.jpeg" alt="Cory Hoo">
 				</div>
 			</header>
 
