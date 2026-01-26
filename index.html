@@ -146,26 +146,32 @@
 					<section id="footer">
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
-							<p>If you have any question or would like to email me:</p>
-							<form method="post" action="#">
+							<p>If you have any questions or would like to email me:</p>
+							
+							<form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+								
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+										<input type="text" name="name" id="name" required />
 									</div>
 									<div class="field">
 										<label for="email">Email</label>
-										<input type="email" name="email" id="email" />
+										<input type="email" name="_replyto" id="email" required />
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="4"></textarea>
+										<textarea name="message" id="message" rows="4" required></textarea>
 									</div>
 								</div>
+
+								<input type="hidden" name="_next" value="https://coryhoo.github.io/thankyou.html" />
+
 								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
+									<li><input type="submit" value="Send Message" class="primary" /></li>
 								</ul>
 							</form>
+
 							<ul class="contact">
 								<li class="icon solid fa-home">
 									Office: PHYS 334 <br />
@@ -181,7 +187,8 @@
 								</li>
 							</ul>
 							<ul class="copyright">
-								<li>&copy; Untitled Inc. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; 2026 Cory Christian Hoo. All rights reserved.</li>
+								<li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</section>
