@@ -21,37 +21,32 @@
 
 	<style>
 
-		.profile-header {
-				display: flex;
-				justify-content: space-between;
-				/* Aligns the bottom of the image with the bottom of the text area */
-				align-items: flex-end; 
-				padding-bottom: 0.5em; /* Controls the 'gap' between the photo and the line */
-				margin-bottom: 2em;
+
+			/* 3. Position the image independently on the right */
+			.profile-image-container {
+				position: absolute; /* Removes image from layout flow */
+				right: 10%;         /* Distance from the right edge of the screen */
+				top: 80px;     /* How far down it hangs (adjust this to fit) */
+				z-index: 10;
 			}
 
 			.profile-image-container img {
-				width: 280px; /* Adjusted size for better corner fit */
+				width: 280px;
 				height: auto;
-				border-radius: 200px;
-				display: block; /* Removes bottom whitespace ghosting */
+				border-radius: 50%; /* 50% is better for perfect circles */
 				border: 2px solid rgba(255, 255, 255, 0.1);
-
-				position: relative;
-				top:  -100px;      /* Negative moves it UP, Positive moves it DOWN */
-				left: -300px;     /* Negative moves it LEFT (away from the edge) */
+				display: block;
 			}
 
-			/* Mobile fix to keep it looking clean on phones */
-			@media screen and (max-width: 736px) {
-				.profile-header {
-					flex-direction: column;
-					align-items: center;
-					text-align: center;
+			/* 4. Mobile Reset (Critical to keep it looking good on phones) */
+			@media screen and (max-width: 980px) {
+				.profile-image-container {
+					position: static; /* Resets absolute positioning */
+					margin-top: 2em;  /* Adds space between title and image */
 				}
+
 				.profile-image-container img {
-					margin-top: 1em;
-					width: 180px;
+					width: 200px; /* Smaller image for mobile */
 				}
 			}
 
@@ -179,7 +174,7 @@
 					<li><a href="research.html">Research</a></li>
 					<li><a href="publications.html">Publications and Talks</a></li>
 					<li><a href="tools.html">Useful Tools</a></li>
-					<li><a href="teaching.html">Teaching, Outreach, and Volunteering</a></li>
+					<li><a href="teaching.html">Education and Outreach</a></li>
 				</ul>
 				<a href="#" class="close">Close</a>
 			</div>
@@ -231,15 +226,21 @@
 
 					
 					<h3 class="major">Education</h3>
-					<p class ="has-line-data" data-line-start="0" data-line-end="1">
-
 						<ul>
-							<li>Ph.D. in Physics, Purdue University, Expected Graduation: 2030
-							<li>M.S. in Astronomy and Astrophysics - San Francisco State University
-							<li>B.S. in Physics with a Specialization in Astrophysics - University of California, Irvine
+							<li>
+								<strong>Ph.D. in Physics - Purdue University</strong><br />
+								<span style="font-size: 0.9em; color: #ccc;">Advisor: Professor <a href="https://www.physics.purdue.edu/people/faculty/peterson.php">John Peterson</a> | Expected 2030 </span>
+							</li>
+							
+							<li style="margin-top: 1.5em;"> <strong>M.S. in Astronomy and Astrophysics - San Francisco State University</strong><br />
+								<span style="font-size: 0.9em; color: #ccc;">Advisor: Professor <a href="https://physics.sfsu.edu/people/adrienne-cool" >Adrienne Cool</a> | 2024</span>
+							</li>
 
+							<li style="margin-top: 1.5em;">
+								<strong>B.S. in Physics - University of California, Irvine</strong><br />
+								<span style="font-size: 0.9em; color: #ccc;">Advisor: Professor <a href="https://www.faculty.uci.edu/profile/?facultyId=6172" >Simona Murgia </a> | 2020</span>
+							</li>
 						</ul>
-					</p>
 
 					<div class="research-slideshow">
 						<div class="slide">
