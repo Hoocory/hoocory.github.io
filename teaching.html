@@ -7,7 +7,7 @@
 -->
 <html>
 	<head>
-		<title>Cory Hoo | Teaching </title>
+		<title>Cory Hoo | Teaching |Education </title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -35,8 +35,8 @@
 								<li><a href="biography.html">About Me</a></li>
 								<li><a href="research.html">Research</a></li>
 								<li><a href="publications.html">Publications and Talks</a></li>
-								<li><a href="tools.html">Useful Tools</a></li>
 								<li><a href="teaching.html">Education and Outreach</a></li>
+								<li><a href="tools.html">Useful Tools</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -46,7 +46,7 @@
 					<section id="wrapper">
 						<header>
 							<div class="inner">
-								<h2>Teaching, Outreach, and Volunteering</h2>
+								<h2>Education and Outreach</h2>
 							</div>
 						</header>
 
@@ -79,6 +79,13 @@
 										<ul>
 											<li>SFSU Observatory Docent 2022 - 2023</li>
 											<li>UCI Resonance Mentor 2019 - 2020</li>
+										</ul>
+									</section>
+
+									<section>
+										<h3 class="major">Educational Resources</h3>
+										<ul>
+											<li>Coming soon...</li>
 										</ul>
 									</section>
 								</div>
@@ -146,6 +153,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function copyEmail() {
+					// Get the text from the span
+					var emailText = document.getElementById("myEmail").innerText;
+					
+					// Copy it to the clipboard
+					navigator.clipboard.writeText(emailText).then(function() {
+						// Optional: Alert the user it worked
+						alert("Email copied to clipboard!");
+					});
+				}
+			</script>
 
 	</body>
 </html>

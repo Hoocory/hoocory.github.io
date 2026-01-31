@@ -35,8 +35,8 @@
 								<li><a href="biography.html">About Me</a></li>
 								<li><a href="research.html">Research</a></li>
 								<li><a href="publications.html">Publications and Talks</a></li>
-								<li><a href="tools.html">Useful Tools</a></li>
 								<li><a href="teaching.html">Education and Outreach</a></li>
+								<li><a href="tools.html">Useful Tools</a></li>
 							</ul>
 							<a href="#" class="close">Close</a>
 						</div>
@@ -60,7 +60,7 @@
 									</ul>
 									<h3 class="major">Talks</h3>
 									<ul>
-										<li>Jan 2023 - <a href="...">AAS #241</a></li>
+										<li>Jan 2023 - <a href="https://aas241-aas.ipostersessions.com/default.aspx?s=D7-9B-BB-DE-F0-3F-8A-92-9D-50-8C-9B-47-C8-20-A6&guestview=true">AAS #241</a></li>
 									</ul>
 								</section>
 							</div>
@@ -126,6 +126,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+			<script>
+				function copyEmail() {
+					// Get the text from the span
+					var emailText = document.getElementById("myEmail").innerText;
+					
+					// Copy it to the clipboard
+					navigator.clipboard.writeText(emailText).then(function() {
+						// Optional: Alert the user it worked
+						alert("Email copied to clipboard!");
+					});
+				}
+			</script>
 
 	</body>
 </html>
